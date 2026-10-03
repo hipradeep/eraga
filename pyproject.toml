@@ -28,14 +28,8 @@ ingest = [
     "beautifulsoup4>=4.12",
     "langchain-text-splitters>=0.2",
 ]
-llm = [
-    "langchain-google-genai>=2.0",
-    "langchain-openai>=0.2",
-    "tiktoken>=0.7",
-]
 retrieval = [
     "rank-bm25>=0.2.2",
-    "sentence-transformers>=3.0",
 ]
 queue = ["celery>=5.4", "redis>=5.0"]
 security = ["python-jose[cryptography]>=3.3", "passlib[bcrypt]>=1.7"]
@@ -48,7 +42,7 @@ dev = [
     "mypy>=1.11",
 ]
 all = [
-    "eraga[ingest,llm,retrieval,queue,security,eval,dev]",
+    "eraga[ingest,retrieval,queue,security,eval,dev]",
 ]
 
 [tool.setuptools.packages.find]
@@ -56,6 +50,11 @@ include = ["app*", "workers*"]
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
+# One event loop for the whole session. Without this, pytest-asyncio gives fixtures
+# and tests different loops and SQLAlchemy's asyncpg pool breaks with
+# "Event loop is closed" when a pooled connection is reused across loops.
+asyncio_default_fixture_loop_scope = "session"
+asyncio_default_test_loop_scope = "session"
 testpaths = ["tests"]
 addopts = "-q --cov=app --cov-report=term-missing"
 
@@ -66,6 +65,11 @@ extend-exclude = ["docs", "data", ".venv", "alembic"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+# FastAPI requires `Depends(...)` as a default argument; B008 would otherwise flag it.
+"app/api/routes/*.py" = ["B008"]
+"tests/*.py" = ["B008"]
 
 [tool.mypy]
 python_version = "3.11"

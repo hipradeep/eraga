@@ -7,5 +7,7 @@ def test_admin_roles_parsed_into_list():
 
 def test_defaults_are_usable_without_env_file():
     settings = Settings(_env_file=None)
-    assert settings.embedding_dim == 1536
+    assert settings.embedding_dim == 768
     assert settings.top_k >= 1
+    assert settings.llm_provider == "groq"
+    assert settings.embedding_provider == "jina"
