@@ -117,15 +117,78 @@ eraga/
 
 ## 🗺️ Roadmap
 
-- [x] Project initialization
-- [x] README & documentation
-- [ ] Document ingestion pipeline
-- [ ] Embedding & vector store integration
-- [ ] RAG pipeline (retrieval + generation)
-- [ ] REST API with FastAPI
-- [ ] Web UI dashboard
-- [ ] Multi-tenant enterprise support
-- [ ] CI/CD pipeline
+### Phase 1 — Foundation ✅ *(Completed)*
+| # | Task | Status |
+|---|------|--------|
+| 1.1 | Project initialization & repo setup | ✅ Done |
+| 1.2 | README & documentation | ✅ Done |
+| 1.3 | Define architecture & tech stack | ✅ Done |
+
+---
+
+### Phase 2 — Data Ingestion 🔄 *(In Progress)*
+| # | Task | Status |
+|---|------|--------|
+| 2.1 | PDF / DOCX / TXT document loaders | 🔄 In Progress |
+| 2.2 | HTML & web page scraper | ⬜ Planned |
+| 2.3 | Database & API connectors | ⬜ Planned |
+| 2.4 | Document chunking & preprocessing | ⬜ Planned |
+| 2.5 | Metadata extraction & tagging | ⬜ Planned |
+
+---
+
+### Phase 3 — Retrieval Engine ⬜ *(Planned)*
+| # | Task | Status |
+|---|------|--------|
+| 3.1 | Embedding generation (Vertex AI / OpenAI) | ⬜ Planned |
+| 3.2 | Vector store integration (ChromaDB / Pinecone) | ⬜ Planned |
+| 3.3 | Semantic similarity search | ⬜ Planned |
+| 3.4 | Hybrid search (dense + sparse / BM25) | ⬜ Planned |
+| 3.5 | Re-ranking & relevance scoring | ⬜ Planned |
+
+---
+
+### Phase 4 — Generation & RAG Pipeline ⬜ *(Planned)*
+| # | Task | Status |
+|---|------|--------|
+| 4.1 | LLM integration (Gemini / GPT / Claude) | ⬜ Planned |
+| 4.2 | Prompt engineering & templates | ⬜ Planned |
+| 4.3 | End-to-end RAG pipeline | ⬜ Planned |
+| 4.4 | Citation & source attribution | ⬜ Planned |
+| 4.5 | Hallucination detection & guardrails | ⬜ Planned |
+
+---
+
+### Phase 5 — API & Integration ⬜ *(Planned)*
+| # | Task | Status |
+|---|------|--------|
+| 5.1 | REST API with FastAPI | ⬜ Planned |
+| 5.2 | Authentication & API key management | ⬜ Planned |
+| 5.3 | Streaming response support | ⬜ Planned |
+| 5.4 | Webhook & event notifications | ⬜ Planned |
+| 5.5 | SDK for Python / JavaScript | ⬜ Planned |
+
+---
+
+### Phase 6 — Enterprise Features ⬜ *(Planned)*
+| # | Task | Status |
+|---|------|--------|
+| 6.1 | Role-based access control (RBAC) | ⬜ Planned |
+| 6.2 | Multi-tenant support | ⬜ Planned |
+| 6.3 | Audit logs & traceability | ⬜ Planned |
+| 6.4 | Data privacy & PII masking | ⬜ Planned |
+| 6.5 | SSO / LDAP / OAuth2 integration | ⬜ Planned |
+
+---
+
+### Phase 7 — UI & DevOps ⬜ *(Planned)*
+| # | Task | Status |
+|---|------|--------|
+| 7.1 | Web UI chat dashboard | ⬜ Planned |
+| 7.2 | Admin panel for document management | ⬜ Planned |
+| 7.3 | CI/CD pipeline (GitHub Actions) | ⬜ Planned |
+| 7.4 | Docker & container support | ⬜ Planned |
+| 7.5 | Cloud deployment (GCP / AWS) | ⬜ Planned |
 
 ---
 
